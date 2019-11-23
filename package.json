@@ -41,5 +41,8 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }
