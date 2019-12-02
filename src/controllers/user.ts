@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcrypt'
-import { NextFunction, Request, Response } from 'express'
+import { Request, Response } from 'express'
 import * as halson from 'halson'
 import { UserModel } from '../schemas/user'
 import { formatOutput } from '../utilities/formatResponseAPI'
@@ -71,7 +71,7 @@ export const updateUser = (req: Request, res: Response) => {
   })
 }
 
-export const removeUser = (req: Request, res: Response, next: NextFunction) => {
+export const removeUser = (req: Request, res: Response) => {
   const username = req.params.username
 
   OrderAPILogger.logger.warn(`[DELETE] [/users] ${username}`)
